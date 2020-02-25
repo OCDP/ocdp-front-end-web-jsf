@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: br.com.pacto.lib:aws-java-sdk-s3:core:1.9.13">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/br/com/pacto/lib/aws-java-sdk-s3/1.9.13/aws-java-sdk-s3-1.9.13-core.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/br/com/pacto/lib/aws-java-sdk-s3/1.9.13/aws-java-sdk-s3-1.9.13-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/br/com/pacto/lib/aws-java-sdk-s3/1.9.13/aws-java-sdk-s3-1.9.13-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
