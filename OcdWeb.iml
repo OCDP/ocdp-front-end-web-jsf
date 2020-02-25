@@ -91,10 +91,15 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-web:5.1.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:5.1.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: commons-beanutils:commons-beanutils:1.9.2" level="project" />
-    <orderEntry type="library" name="Maven: httpclient:httpclient:4.3.4" level="project" />
-    <orderEntry type="library" name="Maven: httpcore:httpcore:4.3.2" level="project" />
-    <orderEntry type="library" name="Maven: br.com.pacto.lib:aws-java-sdk-s3:core:1.9.13" level="project" />
-    <orderEntry type="library" name="Maven: br.com.pacto.lib:aws-java-sdk-ec2:1.9.13" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.12" level="project" />
+    <orderEntry type="library" name="Maven: com.amazonaws:aws-java-sdk-s3:1.9.13" level="project" />
+    <orderEntry type="library" name="Maven: com.amazonaws:aws-java-sdk-kms:1.9.13" level="project" />
+    <orderEntry type="library" name="Maven: com.amazonaws:aws-java-sdk-ec2:1.11.591" level="project" />
+    <orderEntry type="library" name="Maven: com.amazonaws:aws-java-sdk-core:1.11.591" level="project" />
+    <orderEntry type="library" name="Maven: software.amazon.ion:ion-java:1.0.2" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.6.7" level="project" />
+    <orderEntry type="library" name="Maven: com.amazonaws:jmespath-java:1.11.591" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.6" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.6" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.6" level="project" />
@@ -118,7 +123,6 @@
     <orderEntry type="library" name="Maven: com.amazonaws:aws-java-sdk-emr:1.9.13" level="project" />
     <orderEntry type="library" name="Maven: com.amazonaws:aws-java-sdk-elasticache:1.9.13" level="project" />
     <orderEntry type="library" name="Maven: com.amazonaws:aws-java-sdk-elastictranscoder:1.9.13" level="project" />
-    <orderEntry type="library" name="Maven: com.amazonaws:aws-java-sdk-ec2:1.9.13" level="project" />
     <orderEntry type="library" name="Maven: com.amazonaws:aws-java-sdk-dynamodb:1.9.13" level="project" />
     <orderEntry type="library" name="Maven: com.amazonaws:aws-java-sdk-sns:1.9.13" level="project" />
     <orderEntry type="library" name="Maven: com.amazonaws:aws-java-sdk-cloudtrail:1.9.13" level="project" />
@@ -137,13 +141,8 @@
     <orderEntry type="library" name="Maven: com.amazonaws:aws-java-sdk-cloudwatchmetrics:1.9.13" level="project" />
     <orderEntry type="library" name="Maven: com.amazonaws:aws-java-sdk-swf-libraries:1.9.13" level="project" />
     <orderEntry type="library" name="Maven: com.amazonaws:aws-java-sdk-codedeploy:1.9.13" level="project" />
-    <orderEntry type="library" name="Maven: com.amazonaws:aws-java-sdk-kms:1.9.13" level="project" />
     <orderEntry type="library" name="Maven: com.amazonaws:aws-java-sdk-config:1.9.13" level="project" />
     <orderEntry type="library" name="Maven: com.amazonaws:aws-java-sdk-lambda:1.9.13" level="project" />
-    <orderEntry type="library" name="Maven: com.amazonaws:aws-java-sdk-core:1.9.13" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.3.4" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.3.2" level="project" />
-    <orderEntry type="library" name="Maven: com.amazonaws:aws-java-sdk-s3:1.9.13" level="project" />
     <orderEntry type="library" name="Maven: javax.mail:mail:1.4" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.5" level="project" />

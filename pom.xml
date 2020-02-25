@@ -76,7 +76,6 @@
         </profile>
     </profiles>
 
-
     <dependencies>
         <dependency>
             <groupId>com.sun.xml.ws</groupId>
@@ -175,28 +174,31 @@
             <artifactId>commons-beanutils</artifactId>
             <version>1.9.2</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
         <dependency>
-            <groupId>httpclient</groupId>
+            <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
-            <version>4.3.4</version>
+            <version>4.5.2</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore -->
         <dependency>
-            <groupId>httpcore</groupId>
+            <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpcore</artifactId>
-            <version>4.3.2</version>
+            <version>4.4.12</version>
         </dependency>
-        <!-- AMAZON AWS SDK -->
+        <!-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-s3 -->
         <dependency>
-            <groupId>br.com.pacto.lib</groupId>
+            <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk-s3</artifactId>
-            <classifier>core</classifier>
-            <version>1.9.13</version>
+            <version>1.11.591</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-ec2 -->
         <dependency>
-            <groupId>br.com.pacto.lib</groupId>
+            <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk-ec2</artifactId>
-            <version>1.9.13</version>
+            <version>1.11.591</version>
         </dependency>
+
         <dependency>
             <artifactId>jackson-annotations</artifactId>
             <groupId>com.fasterxml.jackson.core</groupId>
