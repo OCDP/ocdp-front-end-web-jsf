@@ -36,6 +36,7 @@
           <element id="library" level="project" name="Maven: org.codehaus.woodstox:woodstox-core-asl:4.1.2" />
           <element id="library" level="project" name="Maven: org.codehaus.woodstox:stax2-api:3.1.1" />
           <element id="library" level="project" name="Maven: com.sun.org.apache.xml.internal:resolver:20050927" />
+          <element id="library" level="project" name="Maven: javax.servlet:servlet-api:2.5" />
           <element id="library" level="project" name="Maven: net.sf.jasperreports:jasperreports:6.5.1" />
           <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.2.2" />
           <element id="library" level="project" name="Maven: commons-digester:commons-digester:2.1" />
@@ -137,8 +138,25 @@
           <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.8.13" />
           <element id="library" level="project" name="Maven: com.auth0:java-jwt:3.4.0" />
           <element id="library" level="project" name="Maven: org.primefaces:primefaces:7.0" />
-          <element id="library" level="project" name="Maven: com.sun.faces:jsf-impl:2.0.2" />
-          <element id="library" level="project" name="Maven: com.sun.facelets:jsf-facelets:1.1.14" />
+          <element id="library" level="project" name="Maven: javax.faces:jsf-impl:1.2_12" />
+          <element id="library" level="project" name="Maven: org.glassfish.web:jstl-impl:1.2" />
+          <element id="library" level="project" name="Maven: javax.servlet.jsp:jsp-api:2.1" />
+          <element id="library" level="project" name="Maven: javax.servlet.jsp.jstl:jstl-api:1.2" />
+          <element id="library" level="project" name="Maven: javax.servlet.jsp.jstl:javax.servlet.jsp.jstl-api:1.2.2" />
+          <element id="library" level="project" name="Maven: org.apache.taglibs:taglibs-standard-impl:1.2.5" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-catalina:8.5.40" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-jsp-api:8.5.40" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-el-api:8.5.40" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-juli:8.5.40" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-annotations-api:8.5.40" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-api:8.5.40" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-jni:8.5.40" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-coyote:8.5.40" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-util:8.5.40" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-util-scan:8.5.40" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-jaspic-api:8.5.40" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:8.5.40" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-servlet-api:8.5.40" />
         </element>
       </element>
       <element id="directory" name="META-INF">

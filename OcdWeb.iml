@@ -50,7 +50,7 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.codehaus.woodstox:woodstox-core-asl:4.1.2" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.codehaus.woodstox:stax2-api:3.1.1" level="project" />
     <orderEntry type="library" name="Maven: com.sun.org.apache.xml.internal:resolver:20050927" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
+    <orderEntry type="library" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
     <orderEntry type="library" name="Maven: net.sf.jasperreports:jasperreports:6.5.1" level="project" />
     <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.2.2" level="project" />
     <orderEntry type="library" name="Maven: commons-digester:commons-digester:2.1" level="project" />
@@ -90,6 +90,7 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:5.1.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-web:5.1.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:5.1.4.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:javax.servlet-api:4.0.1" level="project" />
     <orderEntry type="library" name="Maven: commons-beanutils:commons-beanutils:1.9.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.12" level="project" />
@@ -153,7 +154,24 @@
     <orderEntry type="library" name="Maven: com.auth0:java-jwt:3.4.0" level="project" />
     <orderEntry type="library" name="Maven: org.primefaces:primefaces:7.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.faces:jsf-api:2.0" level="project" />
-    <orderEntry type="library" name="Maven: com.sun.faces:jsf-impl:2.0.2" level="project" />
-    <orderEntry type="library" name="Maven: com.sun.facelets:jsf-facelets:1.1.14" level="project" />
+    <orderEntry type="library" name="Maven: javax.faces:jsf-impl:1.2_12" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.web:jstl-impl:1.2" level="project" />
+    <orderEntry type="library" name="Maven: javax.servlet.jsp:jsp-api:2.1" level="project" />
+    <orderEntry type="library" name="Maven: javax.servlet.jsp.jstl:jstl-api:1.2" level="project" />
+    <orderEntry type="library" name="Maven: javax.servlet.jsp.jstl:javax.servlet.jsp.jstl-api:1.2.2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.taglibs:taglibs-standard-impl:1.2.5" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-catalina:8.5.40" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-jsp-api:8.5.40" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-el-api:8.5.40" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-juli:8.5.40" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-annotations-api:8.5.40" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-api:8.5.40" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-jni:8.5.40" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-coyote:8.5.40" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-util:8.5.40" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-util-scan:8.5.40" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-jaspic-api:8.5.40" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:8.5.40" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-servlet-api:8.5.40" level="project" />
   </component>
 </module>
