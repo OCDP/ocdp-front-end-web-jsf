@@ -89,20 +89,20 @@ $(function () {
     var polarData = [
         {
             value: 300,
-            color: "#01a8fe",
-            highlight: "#01a8fe",
+            color: "#0398AB",
+            highlight: "#0398AB",
             label: "App"
         },
         {
             value: 140,
             color: "#9ed7f4",
-            highlight: "#01a8fe",
+            highlight: "#0398AB",
             label: "Software"
         },
         {
             value: 200,
             color: "#66b5dd",
-            highlight: "#01a8fe",
+            highlight: "#0398AB",
             label: "Laptop"
         }
     ];
@@ -131,20 +131,20 @@ $(function () {
     var doughnutData = [
         {
             value: 300,
-            color: "#01a8fe",
-            highlight: "#01a8fe",
+            color: "#0398AB",
+            highlight: "#0398AB",
             label: "App"
         },
         {
             value: 50,
             color: "#4ebbf4",
-            highlight: "#01a8fe",
+            highlight: "#0398AB",
             label: "Software"
         },
         {
             value: 100,
             color: "#9ed7f4",
-            highlight: "#01a8fe",
+            highlight: "#0398AB",
             label: "Laptop"
         }
     ];

@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="OcdWeb.war">
+    <root id="archive" name="OcdpWeb.war">
       <element id="artifact" artifact-name="OcdWeb:war exploded" />
     </root>
   </artifact>

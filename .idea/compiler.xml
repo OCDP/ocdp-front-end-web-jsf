@@ -4,9 +4,9 @@
     <option name="ajcPath" value="$MAVEN_REPOSITORY$/org/aspectj/aspectjtools/1.8.13/aspectjtools-1.8.13.jar" />
     <option name="cmdLineParams" value="-Xlint:ignore" />
     <option name="delegateToJavac" value="true" />
+    <option name="aptOptionsEnabled" value="true" />
   </component>
   <component name="CompilerConfiguration">
-    <option name="DEFAULT_COMPILER" value="ajc" />
     <option name="BUILD_PROCESS_HEAP_SIZE" value="2000" />
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
@@ -17,7 +17,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="OcdWeb" target="1.5" />
+      <module name="OcdWeb" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

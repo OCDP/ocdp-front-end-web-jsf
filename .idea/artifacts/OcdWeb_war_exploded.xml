@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="OcdWeb:war exploded">
-    <output-path>$PROJECT_DIR$/target/OcdWeb</output-path>
+    <output-path>$PROJECT_DIR$/target/OcdpWeb</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
@@ -17,7 +17,6 @@
           <element id="library" level="project" name="Maven: org.primefaces:primefaces:7.0" />
           <element id="library" level="project" name="Maven: com.sun.faces:jsf-api:2.2.12" />
           <element id="library" level="project" name="Maven: com.sun.faces:jsf-impl:2.2.12" />
-          <element id="library" level="project" name="Maven: com.sun.facelets:jsf-facelets:1.1.14" />
           <element id="library" level="project" name="Maven: javax.xml:jaxrpc-api:1.1" />
           <element id="library" level="project" name="Maven: org.javassist:javassist:3.18.2-GA" />
           <element id="library" level="project" name="Maven: org.glassfish.web:jstl-impl:1.2" />
@@ -185,7 +184,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/OcdWeb/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/OcdpWeb/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="OcdWeb/web/Web" />
     </root>

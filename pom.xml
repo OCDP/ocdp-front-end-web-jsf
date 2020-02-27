@@ -2,17 +2,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>br.com.ocd</groupId>
-    <artifactId>OcdWeb</artifactId>
+    <groupId>br.com.ocdp</groupId>
+    <artifactId>OcdpWeb</artifactId>
     <packaging>war</packaging>
     <version>1.0-rc.1</version>
-    <name>OcdWeb</name>
-    <url>http://www.ocd.com.br</url>
+    <name>OcdpWeb</name>
+    <url>http://www.ocdp.com.br</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <contexto>OcdWeb</contexto>
-        <outputDirectory>C:/ocd/versoes/OcdWeb/deploy/war/RC</outputDirectory>
+        <contexto>OcpdWeb</contexto>
+        <outputDirectory>C:/ocdp/versoes/OcdpWeb/deploy/war/RC</outputDirectory>
         <hostDeploy>localhost</hostDeploy>
         <portDeploy>8085</portDeploy>
         <deployUser>admin</deployUser>
@@ -22,6 +22,9 @@
         <aspectj.version>1.8.9</aspectj.version>
         <jwt-auth0.version>3.4.0</jwt-auth0.version>
         <aspectj.version>1.8.13</aspectj.version>
+
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
 
     </properties>
 
@@ -94,11 +97,13 @@
             <artifactId>jsf-impl</artifactId>
             <version>2.2.12</version>
         </dependency>
+        <!--
         <dependency>
             <groupId>com.sun.facelets</groupId>
             <artifactId>jsf-facelets</artifactId>
             <version>1.1.14</version>
         </dependency>
+        -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
@@ -349,13 +354,12 @@
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
-
+<!--
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
                 <version>1.0</version>
             </plugin>
-
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>aspectj-maven-plugin</artifactId>
@@ -363,12 +367,13 @@
                 <executions>
                     <execution>
                         <goals>
-                            <goal>compile</goal>       <!-- use this goal to weave all your main classes -->
-                            <goal>test-compile</goal>  <!-- use this goal to weave all your test classes -->
+                            <goal>compile</goal>
+                            <goal>test-compile</goal>
                         </goals>
                     </execution>
                 </executions>
             </plugin>
+-->
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -400,11 +405,6 @@
                         <type>pom</type>
                     </dependency>
                     <dependency>
-                        <groupId>javax.activation</groupId>
-                        <artifactId>activation</artifactId>
-                        <version>1.1.1</version>
-                    </dependency>
-                    <dependency>
                         <groupId>commons-beanutils</groupId>
                         <artifactId>commons-beanutils</artifactId>
                         <version>1.7.0</version>
@@ -417,7 +417,13 @@
 
                 </dependencies>
             </plugin>
-
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
         </plugins>
         <pluginManagement>
             <plugins>
