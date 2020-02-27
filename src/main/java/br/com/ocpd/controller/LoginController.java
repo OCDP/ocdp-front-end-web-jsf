@@ -1,5 +1,6 @@
 package br.com.ocpd.controller;
 
+import br.com.ocpd.service.LoginService;
 import br.com.ocpd.to.UsuarioTO;
 import br.com.ocpd.util.Utilitaria;
 
@@ -12,11 +13,36 @@ import java.util.Date;
 @SessionScoped
 public class LoginController extends SuperController {
     private UsuarioTO usuarioTO;
+    private LoginService loginService;
 
     public void logar() {
-        System.out.println(getUsuarioTO().getCpf());
-        System.out.println(getUsuarioTO().getSenha());
-        showMessageGrowView("Logou");
+        if (!validaCpf()) {
+            aviso("Informe um CPF válido!");
+            return;
+        }
+        if (!validaSenha()) {
+            aviso("Informe sua senha!");
+            return;
+        }
+        setUsuarioTO(getLoginService().logar(getUsuarioTO()));
+        if (null != getUsuarioTO().getStatus()) {
+            colocarObjetoNaSessao(USUARIO_LOGADO, getUsuarioTO());
+            redireciona(paginaEnum.INDEX);
+        }
+    }
+
+    private boolean validaCpf() {
+        return Utilitaria.validaTextoPreenchido(getUsuarioTO().getCpf()) && getUsuarioTO().getCpf().trim().length() == 11;
+    }
+
+    private boolean validaSenha() {
+        return Utilitaria.validaTextoPreenchido(getUsuarioTO().getSenha());
+    }
+
+    public void sair() {
+        setUsuarioTO(null);
+        colocarObjetoNaSessao(USUARIO_LOGADO, getUsuarioTO());
+        redireciona(paginaEnum.LOGIN);
     }
 
     public UsuarioTO getUsuarioTO() {
@@ -31,5 +57,15 @@ public class LoginController extends SuperController {
 
     public String getAno() {
         return Utilitaria.anoAtual();
+    }
+
+    public LoginService getLoginService() {
+        if (null == loginService)
+            loginService = new LoginService();
+        return loginService;
+    }
+
+    public void setLoginService(LoginService loginService) {
+        this.loginService = loginService;
     }
 }

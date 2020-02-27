@@ -34,9 +34,10 @@
                      title="OCDP - ORAL CANCER DECTECT PROJECT"/>
                 <h3 class="espacoAcima20">Seja bem vindo! Faça o login na sua conta.</h3>
                 <h:form id="form" class="m-t espacoAcima20">
+                    <p:growl id="growl" showDetail="true" sticky="true"/>
                     <div class="form-group espacoAcima10">
-                        <p:inputText value="#{LoginController.usuarioTO.cpf}" styleClass="form-control"
-                                     placeholder="CPF" id="usuario"/>
+                        <p:inputText  value="#{LoginController.usuarioTO.cpf}" styleClass="form-control"
+                                     placeholder="CPF" id="cpf" maxlength="11"/>
                     </div>
                     <div class="form-group">
                         <p:password value="#{LoginController.usuarioTO.senha}" styleClass="form-control"
@@ -46,7 +47,7 @@
                     <a href="#" class="col-md-6" style="float: left; text-align: left"><input type="checkbox"/> Lembre-me</a>
                     <a href="#" class="col-md-6" style="float: right; text-align: right" >Esqueci minha senha</a>
                     <br /><br /><br />
-                    <p:commandLink styleClass="btn btn-lg btn-primary col-md-5" value="Login" style="border-radius: 5px;"
+                    <p:commandLink styleClass="btn btn-lg btn-primary col-md-5 linkHover" value="Login" style="border-radius: 5px; :#FFFFFF;"
                                    action="#{LoginController.logar}" ajax="false" id="logar"/>
                     <a class="btn btn-lg btn-default col-md-5" style="float: right; border: solid 1px #CCCCCC; border-radius: 5px;" href="register.jsf">Cadastre-se</a>
                     <br /><br /><br />

@@ -59,4 +59,13 @@ public class Utilitaria {
     public static String formataData(String mascara, Date data) {
         return new SimpleDateFormat(mascara).format(data);
     }
+
+    /**
+     * Retorna verdadeiro se o texto estiver preenchido
+     * @param texto
+     * @return
+     */
+    public static boolean validaTextoPreenchido(String texto) {
+        return null != texto && texto.trim().length() > 0;
+    }
 }

@@ -6,7 +6,7 @@ public class UsuarioTO extends TransferObject{
     private String senha;
     private String nome;
     private String email;
-    private String status;
+    private String status = null;
     private String telefone;
     private String tipoUsuario;
     private String tipoAtencao;

@@ -34,7 +34,7 @@ a:hover,a:focus, button, button:focus{
     background-color: transparent;
     outline: 0 !important;
     text-decoration: none; 
-    color: #0398AB;
+    color: #AAAAAA;
 }
 h1,
 h2,
@@ -1833,4 +1833,7 @@ height: 200px;
 }
 .negrito{
     font-weight: bolder;
+}
+.linkHover a:hover{
+    color:#FFFFFF;
 }
