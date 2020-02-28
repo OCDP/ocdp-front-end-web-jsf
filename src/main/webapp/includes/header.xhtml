@@ -9,6 +9,9 @@
 
 <h:body>
     <h:form>
+        <f:metadata>
+            <f:event type="preRenderView" listener="#{SuperController.validaSessaoUsuario}"/>
+        </f:metadata>
         <p:growl id="growl" showDetail="true" sticky="true"/>
         <nav class="navbar navbar-default yamm navbar-fixed-top">
             <div class="container-fluid">

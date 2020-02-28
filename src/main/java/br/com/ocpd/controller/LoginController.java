@@ -13,6 +13,7 @@ import java.util.Date;
 @SessionScoped
 public class LoginController extends SuperController {
     private UsuarioTO usuarioTO;
+    private UsuarioTO novoUsuarioTO;
     private LoginService loginService;
 
     public void logar() {
@@ -41,8 +42,20 @@ public class LoginController extends SuperController {
 
     public void sair() {
         setUsuarioTO(null);
-        colocarObjetoNaSessao(USUARIO_LOGADO, getUsuarioTO());
+        removerObjetoDaSessao(USUARIO_LOGADO);
         redireciona(paginaEnum.LOGIN);
+    }
+
+    public void recuperarSenha() {
+        getLoginService().recuperarSenha(getUsuarioTO());
+    }
+
+    public void gravarNovoUsuario() {
+        getLoginService().gravarNovoUsuario(getNovoUsuarioTO());
+    }
+
+    public String getAno() {
+        return Utilitaria.anoAtual();
     }
 
     public UsuarioTO getUsuarioTO() {
@@ -55,9 +68,6 @@ public class LoginController extends SuperController {
         this.usuarioTO = usuarioTO;
     }
 
-    public String getAno() {
-        return Utilitaria.anoAtual();
-    }
 
     public LoginService getLoginService() {
         if (null == loginService)
@@ -67,5 +77,13 @@ public class LoginController extends SuperController {
 
     public void setLoginService(LoginService loginService) {
         this.loginService = loginService;
+    }
+
+    public UsuarioTO getNovoUsuarioTO() {
+        return novoUsuarioTO;
+    }
+
+    public void setNovoUsuarioTO(UsuarioTO novoUsuarioTO) {
+        this.novoUsuarioTO = novoUsuarioTO;
     }
 }

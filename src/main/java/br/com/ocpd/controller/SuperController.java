@@ -12,19 +12,8 @@ import java.io.IOException;
 
 @ManagedBean(name = "SuperController")
 @SessionScoped
-public class SuperController {
+public class SuperController extends Navegacao {
     public static final String USUARIO_LOGADO = "USUARIO_LOGADO";
-
-    protected enum paginaEnum{
-        INDEX("index.jsf"), LOGIN("login");
-        private String pagina;
-        paginaEnum(String pagina) {
-            this.pagina = pagina;
-        }
-        public String getPagina() {
-            return pagina;
-        }
-    }
 
     public static void showNegrito(String message) {
         FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(message, ""));
@@ -54,6 +43,10 @@ public class SuperController {
         ((HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest()).getSession().setAttribute(key, obj);
     }
 
+    public void removerObjetoDaSessao(String key) {
+        ((HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest()).getSession().removeAttribute(key);
+    }
+
     public Object pegarObjetoDaSessao(String key) {
         return ((HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest()).getSession().getAttribute(key);
     }
@@ -67,6 +60,12 @@ public class SuperController {
             FacesContext.getCurrentInstance().getExternalContext().redirect(pagina.getPagina());
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    public void validaSessaoUsuario() {
+        if (null == pegarObjetoDaSessao(USUARIO_LOGADO)) {
+            redireciona(paginaEnum.LOGIN);
         }
     }
 }
