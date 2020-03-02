@@ -17,33 +17,25 @@ public class LoginController extends SuperController {
     private LoginService loginService;
 
     public void logar() {
-        if (!validaCpf()) {
+        if (!Utilitaria.validaCpf(getUsuarioTO().getCpf())) {
             aviso("Informe um CPF válido!");
             return;
         }
-        if (!validaSenha()) {
+        if (!Utilitaria.validaTextoPreenchido(getUsuarioTO().getSenha())) {
             aviso("Informe sua senha!");
             return;
         }
         setUsuarioTO(getLoginService().logar(getUsuarioTO()));
         if (null != getUsuarioTO().getStatus()) {
             colocarObjetoNaSessao(USUARIO_LOGADO, getUsuarioTO());
-            redireciona(paginaEnum.INDEX);
+            redireciona(PaginaEnum.INDEX);
         }
-    }
-
-    private boolean validaCpf() {
-        return Utilitaria.validaTextoPreenchido(getUsuarioTO().getCpf()) && getUsuarioTO().getCpf().trim().length() == 11;
-    }
-
-    private boolean validaSenha() {
-        return Utilitaria.validaTextoPreenchido(getUsuarioTO().getSenha());
     }
 
     public void sair() {
         setUsuarioTO(null);
         removerObjetoDaSessao(USUARIO_LOGADO);
-        redireciona(paginaEnum.LOGIN);
+        redireciona(PaginaEnum.LOGIN);
     }
 
     public void recuperarSenha() {

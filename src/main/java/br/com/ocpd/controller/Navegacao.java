@@ -2,17 +2,18 @@ package br.com.ocpd.controller;
 
 public class Navegacao {
 
-    protected enum paginaEnum {
-        CADASTRO_USUARIO("cadastro_usuario.jsf"),
+    protected enum PaginaEnum {
+        LOGIN("login.jsf"),
+        CAD_USUARIO("cadastro_usuario.jsf"),
+        RECUPERAR_SENHA("recuperar_senha.jsf"),
         DASHBOARD("dashboard.jsf"),
         INDEX("index.jsf"),
-        LOGIN("login.jsf"),
-        RECUPERAR_SENHA("recuperar_senha.jsf"),
-        Z("");
+        Z(".jsf"),
+        ZZ("");
 
         private String pagina;
 
-        paginaEnum(String pagina) {
+        PaginaEnum(String pagina) {
             this.pagina = pagina;
         }
 

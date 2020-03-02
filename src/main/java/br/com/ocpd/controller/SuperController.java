@@ -55,7 +55,7 @@ public class SuperController extends Navegacao {
         return (UsuarioTO) ((HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest()).getSession().getAttribute(USUARIO_LOGADO);
     }
 
-    public void redireciona(paginaEnum pagina) {
+    public void redireciona(PaginaEnum pagina) {
         try {
             FacesContext.getCurrentInstance().getExternalContext().redirect(pagina.getPagina());
         } catch (IOException e) {
@@ -65,7 +65,7 @@ public class SuperController extends Navegacao {
 
     public void validaSessaoUsuario() {
         if (null == pegarObjetoDaSessao(USUARIO_LOGADO)) {
-            redireciona(paginaEnum.LOGIN);
+            redireciona(PaginaEnum.LOGIN);
         }
     }
 }

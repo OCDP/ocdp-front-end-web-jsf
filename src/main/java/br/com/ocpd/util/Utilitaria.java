@@ -68,4 +68,14 @@ public class Utilitaria {
     public static boolean validaTextoPreenchido(String texto) {
         return null != texto && texto.trim().length() > 0;
     }
+
+    /**
+     * retorna verdadeiro se o CPF for válido
+     * @param cpf
+     * @return
+     */
+    public static boolean validaCpf(String cpf){
+
+        return Utilitaria.validaTextoPreenchido(cpf) && cpf.trim().length() == 11;
+    }
 }

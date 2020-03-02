@@ -21,7 +21,7 @@ public class LoginService extends AwsApi {
         usuarioTO.setNome("Dáurio Filho");
 
         try {
-            HttpResponse response = getResponse(URL_LOGIN);
+            HttpResponse response = getResponse(ApiEnum.URL_BASIC_AUTH);
             if (response.getStatusLine().getStatusCode() == 200) {
                 JSONObject js = getJson(response);
                 usuarioTO.setId(js.getLong(""));
