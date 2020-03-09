@@ -1,4 +1,4 @@
 package br.com.ocpd.dto;
 
-public class ResultadosDTO {
+public class ResultadosDTO extends TransferObject {
 }

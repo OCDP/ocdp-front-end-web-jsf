@@ -1,4 +1,4 @@
 package br.com.ocpd.dto;
 
-public class AdminDTO {
+public class AdminDTO extends TransferObject {
 }

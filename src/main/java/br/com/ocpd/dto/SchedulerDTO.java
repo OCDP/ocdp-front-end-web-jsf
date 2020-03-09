@@ -1,4 +1,4 @@
 package br.com.ocpd.dto;
 
-public class SchedulerDTO {
+public class SchedulerDTO extends TransferObject {
 }

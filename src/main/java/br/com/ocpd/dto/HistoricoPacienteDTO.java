@@ -1,4 +1,4 @@
 package br.com.ocpd.dto;
 
-public class HistoricoPacienteDTO {
+public class HistoricoPacienteDTO extends TransferObject {
 }

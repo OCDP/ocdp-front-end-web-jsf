@@ -1,4 +1,4 @@
 package br.com.ocpd.dto;
 
-public class FatorDeRiscoDTO {
+public class FatorDeRiscoDTO extends TransferObject {
 }

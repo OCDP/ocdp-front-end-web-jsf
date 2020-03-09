@@ -1,4 +1,4 @@
 package br.com.ocpd.dto;
 
-public class LocalDeAtendimentoDTO {
+public class LocalDeAtendimentoDTO extends TransferObject {
 }

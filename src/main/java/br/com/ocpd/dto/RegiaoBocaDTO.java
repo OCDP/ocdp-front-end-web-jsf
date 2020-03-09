@@ -1,4 +1,4 @@
 package br.com.ocpd.dto;
 
-public class RegiaoBocaDTO {
+public class RegiaoBocaDTO extends TransferObject {
 }

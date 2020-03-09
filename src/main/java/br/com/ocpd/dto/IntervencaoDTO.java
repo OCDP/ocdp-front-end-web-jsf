@@ -1,4 +1,4 @@
 package br.com.ocpd.dto;
 
-public class IntervencaoDTO {
+public class IntervencaoDTO extends TransferObject {
 }

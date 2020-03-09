@@ -1,4 +1,4 @@
 package br.com.ocpd.dto;
 
-public class DistritoDTO {
+public class DistritoDTO extends TransferObject {
 }

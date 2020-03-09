@@ -1,4 +1,4 @@
 package br.com.ocpd.dto;
 
-public class TipoLesaoDTO {
+public class TipoLesaoDTO extends TransferObject {
 }
