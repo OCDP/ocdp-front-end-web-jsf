@@ -17,6 +17,8 @@ public class UsuarioDTO extends TransferObject {
         try {
             if (obj.get("id").getAsLong() > 0) {
                 super.setId(obj.get("id").getAsLong());
+            } else {
+                super.setId(0L);
             }
         } catch (Exception e) {
             e.printStackTrace();
