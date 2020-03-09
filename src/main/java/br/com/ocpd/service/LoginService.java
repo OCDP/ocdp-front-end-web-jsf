@@ -1,51 +1,41 @@
 package br.com.ocpd.service;
 
-import br.com.ocpd.to.UsuarioTO;
-
+import br.com.ocpd.to.UsuarioDTO;
 import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.http.util.EntityUtils;
-import org.json.JSONArray;
 import org.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 public class LoginService extends AwsApi {
 
-    public UsuarioTO logar(UsuarioTO usuarioTO) {
-        usuarioTO.setStatus("Ativo");
-        usuarioTO.setNome("Dáurio Filho");
+    public UsuarioDTO logar(UsuarioDTO usuarioDTO) {
+        usuarioDTO.setStatus("Ativo");
+        usuarioDTO.setNome("Dáurio Filho");
 
         try {
             HttpResponse response = getResponse(ApiEnum.URL_BASIC_AUTH);
             if (response.getStatusLine().getStatusCode() == 200) {
                 JSONObject js = getJson(response);
-                usuarioTO.setId(js.getLong(""));
-                usuarioTO.setStatus(js.getString(""));
-                usuarioTO.setNome(js.getString(""));
-                usuarioTO.setCpf(js.getString(""));
-                usuarioTO.setEmail(js.getString(""));
-                usuarioTO.setTelefone(js.getString(""));
-                usuarioTO.setTipoAtencao(js.getString(""));
-                usuarioTO.setTipoUsuario(js.getString(""));
+                usuarioDTO.setId(js.getLong(""));
+                usuarioDTO.setStatus(js.getString(""));
+                usuarioDTO.setNome(js.getString(""));
+                usuarioDTO.setCpf(js.getString(""));
+                usuarioDTO.setEmail(js.getString(""));
+                usuarioDTO.setTelefone(js.getString(""));
+                usuarioDTO.setTipoAtencao(js.getString(""));
+                usuarioDTO.setTipoUsuario(js.getString(""));
             } else {
-                usuarioTO = null;
+                usuarioDTO = null;
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return usuarioTO;
+        return usuarioDTO;
     }
 
-    public void recuperarSenha(UsuarioTO usuarioTO) {
+    public void recuperarSenha(UsuarioDTO usuarioDTO) {
 
     }
 
-    public void gravarNovoUsuario(UsuarioTO usuarioTO) {
+    public void gravarNovoUsuario(UsuarioDTO usuarioDTO) {
 
     }
 

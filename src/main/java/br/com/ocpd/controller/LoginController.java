@@ -1,63 +1,61 @@
 package br.com.ocpd.controller;
 
 import br.com.ocpd.service.LoginService;
-import br.com.ocpd.to.UsuarioTO;
+import br.com.ocpd.to.UsuarioDTO;
 import br.com.ocpd.util.Utilitaria;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 @ManagedBean(name = "LoginController")
 @SessionScoped
 public class LoginController extends SuperController {
-    private UsuarioTO usuarioTO;
-    private UsuarioTO novoUsuarioTO;
+    private UsuarioDTO usuarioDTO;
+    private UsuarioDTO novoUsuarioDTO;
     private LoginService loginService;
 
     public void logar() {
-        if (!Utilitaria.validaCpf(getUsuarioTO().getCpf())) {
+        if (!Utilitaria.validaCpf(getUsuarioDTO().getCpf())) {
             aviso("Informe um CPF válido!");
             return;
         }
-        if (!Utilitaria.validaTextoPreenchido(getUsuarioTO().getSenha())) {
+        if (!Utilitaria.validaTextoPreenchido(getUsuarioDTO().getSenha())) {
             aviso("Informe sua senha!");
             return;
         }
-        setUsuarioTO(getLoginService().logar(getUsuarioTO()));
-        if (null != getUsuarioTO().getStatus()) {
-            colocarObjetoNaSessao(USUARIO_LOGADO, getUsuarioTO());
+        setUsuarioDTO(getLoginService().logar(getUsuarioDTO()));
+        if (null != getUsuarioDTO().getStatus()) {
+            colocarObjetoNaSessao(USUARIO_LOGADO, getUsuarioDTO());
             redireciona(PaginaEnum.INDEX);
         }
     }
 
     public void sair() {
-        setUsuarioTO(null);
+        setUsuarioDTO(null);
         removerObjetoDaSessao(USUARIO_LOGADO);
         redireciona(PaginaEnum.LOGIN);
     }
 
     public void recuperarSenha() {
-        getLoginService().recuperarSenha(getUsuarioTO());
+        getLoginService().recuperarSenha(getUsuarioDTO());
     }
 
     public void gravarNovoUsuario() {
-        getLoginService().gravarNovoUsuario(getNovoUsuarioTO());
+        getLoginService().gravarNovoUsuario(getNovoUsuarioDTO());
     }
 
     public String getAno() {
         return Utilitaria.anoAtual();
     }
 
-    public UsuarioTO getUsuarioTO() {
-        if (null == this.usuarioTO)
-            this.usuarioTO = new UsuarioTO();
-        return this.usuarioTO;
+    public UsuarioDTO getUsuarioDTO() {
+        if (null == this.usuarioDTO)
+            this.usuarioDTO = new UsuarioDTO();
+        return this.usuarioDTO;
     }
 
-    public void setUsuarioTO(UsuarioTO usuarioTO) {
-        this.usuarioTO = usuarioTO;
+    public void setUsuarioDTO(UsuarioDTO usuarioDTO) {
+        this.usuarioDTO = usuarioDTO;
     }
 
 
@@ -67,15 +65,15 @@ public class LoginController extends SuperController {
         return loginService;
     }
 
+    public UsuarioDTO getNovoUsuarioDTO() {
+        return novoUsuarioDTO;
+    }
+
+    public void setNovoUsuarioDTO(UsuarioDTO novoUsuarioDTO) {
+        this.novoUsuarioDTO = novoUsuarioDTO;
+    }
+
     public void setLoginService(LoginService loginService) {
         this.loginService = loginService;
-    }
-
-    public UsuarioTO getNovoUsuarioTO() {
-        return novoUsuarioTO;
-    }
-
-    public void setNovoUsuarioTO(UsuarioTO novoUsuarioTO) {
-        this.novoUsuarioTO = novoUsuarioTO;
     }
 }

@@ -1,13 +1,12 @@
 package br.com.ocpd.controller;
 
-import br.com.ocpd.to.UsuarioTO;
+import br.com.ocpd.to.UsuarioDTO;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @ManagedBean(name = "SuperController")
@@ -51,8 +50,8 @@ public class SuperController extends Navegacao {
         return ((HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest()).getSession().getAttribute(key);
     }
 
-    public UsuarioTO getUsuarioLogado() {
-        return (UsuarioTO) ((HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest()).getSession().getAttribute(USUARIO_LOGADO);
+    public UsuarioDTO getUsuarioLogado() {
+        return (UsuarioDTO) ((HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest()).getSession().getAttribute(USUARIO_LOGADO);
     }
 
     public void redireciona(PaginaEnum pagina) {

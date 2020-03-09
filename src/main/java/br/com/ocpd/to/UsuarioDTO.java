@@ -1,6 +1,6 @@
 package br.com.ocpd.to;
 
-public class UsuarioTO extends TransferObject{
+public class UsuarioDTO extends TransferObject{
 
     private String cpf;
     private String senha;
