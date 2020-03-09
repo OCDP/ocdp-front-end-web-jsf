@@ -1,11 +1,34 @@
 package br.com.ocpd.dto;
 
+import org.json.JSONObject;
+
 import java.io.Serializable;
 
 public abstract class TransferObject implements Serializable {
 
     private Long id;
     private String label;
+
+    public TransferObject() {
+    }
+
+    public TransferObject(JSONObject obj) {
+        try {
+            if (obj.getInt ("id") > 0) {
+                setId(obj.getLong("id"));
+            } else {
+                setId(0L);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            setId(0L);
+        }
+    }
+
+    public TransferObject(Long id, String label) {
+        this.id = id;
+        this.label = label;
+    }
 
     @Override
     public int hashCode() {

@@ -1,6 +1,7 @@
 package br.com.ocpd.dto;
 
 import com.google.gson.JsonObject;
+import org.json.JSONObject;
 
 public class UsuarioDTO extends TransferObject {
 
@@ -13,17 +14,8 @@ public class UsuarioDTO extends TransferObject {
     private String tipoUsuario;
     private String tipoAtencao;
 
-    public UsuarioDTO(JsonObject obj) {
-        try {
-            if (obj.get("id").getAsLong() > 0) {
-                super.setId(obj.get("id").getAsLong());
-            } else {
-                super.setId(0L);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            super.setId(0L);
-        }
+    public UsuarioDTO(JSONObject obj) {
+        super(obj);
         this.cpf = obj.get("cpf").toString();
         /*this.senha = obj.get("").toString();*/
         this.nome = obj.get("nome").toString();
