@@ -1,6 +1,6 @@
 package br.com.ocpd.service;
 
-import br.com.ocpd.to.UsuarioDTO;
+import br.com.ocpd.dto.UsuarioDTO;
 import org.apache.http.HttpResponse;
 import org.json.JSONObject;
 
