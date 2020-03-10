@@ -17,7 +17,6 @@ public class UsuarioDTO extends TransferObject {
     public UsuarioDTO(JSONObject obj) {
         super(obj);
         this.cpf = obj.get("cpf").toString();
-        /*this.senha = obj.get("").toString();*/
         this.nome = obj.get("nome").toString();
         this.email = obj.get("email").toString();
         this.status = obj.get("status").toString();
