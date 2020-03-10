@@ -1,6 +1,6 @@
 package br.com.ocpd.controller;
 
-import br.com.ocpd.to.UsuarioDTO;
+import br.com.ocpd.dto.UsuarioDTO;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
