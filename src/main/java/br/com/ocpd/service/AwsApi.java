@@ -3,6 +3,8 @@ package br.com.ocpd.service;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPatch;
+import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
@@ -62,7 +64,9 @@ public class AwsApi {
         END_TIPO_LOCAL_ATENDIMENTO_ATUALIZAR(URL_ENDPOINT + "tipo-local-atendimento-controller/atualizarUsingPUT_10"),
         END_TIPO_LOCAL_ATENDIMENTO_SALVAR(URL_ENDPOINT + "tipo-local-atendimento-controller/salvarUsingPOST_12"),
         URL_GET_USUARIO_BY_TIPO_AND_STATUS(URL_API + "usuario/byTipoAndStatus/%s/%s"),
-        END_GET_USUARIO_BY_TIPO_AND_STATUS(URL_ENDPOINT + "usuario-controller/getByTipoAndStatusUsingGET");
+        END_GET_USUARIO_BY_TIPO_AND_STATUS(URL_ENDPOINT + "usuario-controller/getByTipoAndStatusUsingGET"),
+        TEST("http://api-ocdp.us-east-2.elasticbeanstalk.com:8080/api/admin/versaoBan"),
+        TEST2("http://api-ocdp.us-east-2.elasticbeanstalk.com:8080/api/usuario/basicauth");;
 
         private String url;
 
@@ -75,11 +79,83 @@ public class AwsApi {
         }
     }
 
+    public enum TipoUsuarioEnum {
+        ENFERMEIRO("ENFERMEIRO"),
+        MEDICO("MEDICO"),
+        DENTISTA("DENTISTA"),
+        ASSISTENTE("ASSISTENTE");
+
+        private String atencao;
+
+        TipoUsuarioEnum(String tipo) {
+            this.atencao = atencao;
+        }
+    }
+
+    public enum TipoAtencaoEnum {
+        PRIMARIA("PRIMARIA"),
+        SECUNDARIA("SECUNDARIA"),
+        TERCIARIA("TERCIARIA");
+
+        private String atencao;
+
+        TipoAtencaoEnum(String tipo) {
+            this.atencao = atencao;
+        }
+
+        public String getAtencao() {
+            return atencao;
+        }
+
+        public void setAtencao(String atencao) {
+            this.atencao = atencao;
+        }
+    }
+
+    public enum StatusUsuarioEnum {
+        ATIVO("ATIVO"),
+        INATIVO("INATIVO");
+
+        private String tipo;
+
+        StatusUsuarioEnum(String tipo) {
+            this.tipo = tipo;
+        }
+
+        public String getTipo() {
+            return tipo;
+        }
+
+        public void setTipo(String tipo) {
+            this.tipo = tipo;
+        }
+    }
+
 
     public HttpResponse getResponse(ApiEnum apiEnum) {
         try {
             HttpClient client = HttpClientBuilder.create().build();
             return client.execute(new HttpGet(apiEnum.getUrl()));
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public HttpResponse patchResponse(ApiEnum apiEnum) {
+        try {
+            HttpClient client = HttpClientBuilder.create().build();
+            return client.execute(new HttpPatch(apiEnum.getUrl()));
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public HttpResponse postResponse(ApiEnum apiEnum) {
+        try {
+            HttpClient client = HttpClientBuilder.create().build();
+            return client.execute(new HttpPost(apiEnum.getUrl()));
         } catch (IOException e) {
             e.printStackTrace();
             return null;
@@ -99,11 +175,19 @@ public class AwsApi {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         headers.add("Accept", "*/*");
-        headers.add("Cache-Control", "no-cache");
-        headers.add("Connection", "keep-alive");
-        headers.add("Content-Type", "application/json");
         headers.add("Accept-Encoding", "gzip, deflate, br");
+        headers.add("Cache-Control", "no-cache, no-store, max-age=0, must-revalidate");
+        headers.add("Connection", "keep-alive");
+        headers.add("Content-Type", "application/json;charset=UTF-8");
+        headers.add("expires", "0");
         headers.add("Host", "ec2-3-20-202-13.us-east-2.compute.amazonaws.com");
+        headers.add("pragma", "no-cache");
+        headers.add("transfer-encoding", "chunked");
+        headers.add("x-content-type-options", "nosniff");
+        headers.add("x-frame-options", "DENY");
+        headers.add("x-xss-protection", "1; mode=block");
+        headers.add("authorization", "Basic admin:p@55w0Rd");
+
         return headers;
     }
 }

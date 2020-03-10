@@ -1768,11 +1768,17 @@ body .fc {
     margin-top: 150px;
 }
 .fundo_branco_login{
-    background-color: #FFF;
+    background-color: #f8f8f8;
     padding: 50px;
-    width: 520px;
-    height: 520px;
-    border-radius: 520px;
+    width: 600px;
+    height: 600px;
+    border-radius: 600px;
+    /*background-image: radial-gradient(#fff, #fafafa, #f5f5f5);*/
+}
+
+.sombraBox {
+    padding: 10px;
+   /* box-shadow: 5px 5px 5px 5px #f0f0f0;*/
 }
 
 .fundo_branco_registro{

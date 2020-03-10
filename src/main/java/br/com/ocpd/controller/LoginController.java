@@ -1,7 +1,7 @@
 package br.com.ocpd.controller;
 
 import br.com.ocpd.service.LoginService;
-import br.com.ocpd.to.UsuarioDTO;
+import br.com.ocpd.dto.UsuarioDTO;
 import br.com.ocpd.util.Utilitaria;
 
 import javax.faces.bean.ManagedBean;
@@ -13,6 +13,7 @@ public class LoginController extends SuperController {
     private UsuarioDTO usuarioDTO;
     private UsuarioDTO novoUsuarioDTO;
     private LoginService loginService;
+    private boolean lembrarSenha;
 
     public void logar() {
         if (!Utilitaria.validaCpf(getUsuarioDTO().getCpf())) {
@@ -75,5 +76,13 @@ public class LoginController extends SuperController {
 
     public void setLoginService(LoginService loginService) {
         this.loginService = loginService;
+    }
+
+    public boolean isLembrarSenha() {
+        return lembrarSenha;
+    }
+
+    public void setLembrarSenha(boolean lembrarSenha) {
+        this.lembrarSenha = lembrarSenha;
     }
 }

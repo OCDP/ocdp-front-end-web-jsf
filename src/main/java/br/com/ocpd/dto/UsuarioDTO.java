@@ -14,6 +14,9 @@ public class UsuarioDTO extends TransferObject {
     private String tipoUsuario;
     private String tipoAtencao;
 
+    public UsuarioDTO() {
+    }
+
     public UsuarioDTO(JSONObject obj) {
         super(obj);
         this.cpf = obj.get("cpf").toString();

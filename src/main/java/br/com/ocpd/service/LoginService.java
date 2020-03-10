@@ -7,21 +7,20 @@ import org.json.JSONObject;
 public class LoginService extends AwsApi {
 
     public UsuarioDTO logar(UsuarioDTO usuarioDTO) {
-        usuarioDTO.setStatus("Ativo");
-        usuarioDTO.setNome("Dáurio Filho");
 
         try {
-            HttpResponse response = getResponse(ApiEnum.URL_BASIC_AUTH);
+//            HttpResponse response = getResponse(ApiEnum.URL_BASIC_AUTH);
+            HttpResponse response = getResponse(ApiEnum.TEST2);
+
+            System.out.println("1 = " + response.getStatusLine());
+            System.out.println("2 = " + response.getEntity().getContent());
+
             if (response.getStatusLine().getStatusCode() == 200) {
                 JSONObject js = getJson(response);
-                usuarioDTO.setId(js.getLong(""));
-                usuarioDTO.setStatus(js.getString(""));
-                usuarioDTO.setNome(js.getString(""));
-                usuarioDTO.setCpf(js.getString(""));
-                usuarioDTO.setEmail(js.getString(""));
-                usuarioDTO.setTelefone(js.getString(""));
-                usuarioDTO.setTipoAtencao(js.getString(""));
-                usuarioDTO.setTipoUsuario(js.getString(""));
+                usuarioDTO = new UsuarioDTO(getJson(response));
+
+                usuarioDTO.setStatus("Ativo");
+                usuarioDTO.setNome("Dáurio Filho");
             } else {
                 usuarioDTO = null;
             }
@@ -37,6 +36,11 @@ public class LoginService extends AwsApi {
 
     public void gravarNovoUsuario(UsuarioDTO usuarioDTO) {
 
+    }
+
+    public static void main(String[] args) {
+        new LoginService().logar(new UsuarioDTO());
+        System.out.println(ApiEnum.TEST2.getUrl());
     }
 
 }
