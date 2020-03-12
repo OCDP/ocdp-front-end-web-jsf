@@ -1,4 +1,4 @@
 package br.com.ocpd.controller;
 
-public class UsuarioController {
+public class UsuarioController extends SuperController {
 }

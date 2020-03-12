@@ -1,4 +1,4 @@
 package br.com.ocpd.controller;
 
-public class AcompanhamentoController {
+public class AcompanhamentoController extends SuperController {
 }

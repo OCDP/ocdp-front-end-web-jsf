@@ -1,4 +1,4 @@
 package br.com.ocpd.controller;
 
-public class ResultadosController {
+public class ResultadosController extends SuperController {
 }

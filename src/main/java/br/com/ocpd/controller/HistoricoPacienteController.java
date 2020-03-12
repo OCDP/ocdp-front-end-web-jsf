@@ -1,4 +1,4 @@
 package br.com.ocpd.controller;
 
-public class HistoricoPacienteController {
+public class HistoricoPacienteController extends SuperController {
 }

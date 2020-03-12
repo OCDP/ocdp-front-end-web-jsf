@@ -1,4 +1,4 @@
 package br.com.ocpd.controller;
 
-public class DistritoController {
+public class DistritoController extends SuperController {
 }

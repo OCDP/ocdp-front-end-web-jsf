@@ -1,4 +1,4 @@
 package br.com.ocpd.controller;
 
-public class IntervencaoController {
+public class IntervencaoController extends SuperController {
 }

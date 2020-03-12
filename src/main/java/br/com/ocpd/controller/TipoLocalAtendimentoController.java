@@ -1,4 +1,4 @@
 package br.com.ocpd.controller;
 
-public class TipoLocalAtendimentoController {
+public class TipoLocalAtendimentoController extends SuperController {
 }

@@ -1,4 +1,4 @@
 package br.com.ocpd.controller;
 
-public class TipoLEsaoController {
+public class TipoLEsaoController extends SuperController {
 }

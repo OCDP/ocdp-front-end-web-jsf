@@ -1,4 +1,4 @@
 package br.com.ocpd.controller;
 
-public class FatorDeRiscoController {
+public class FatorDeRiscoController extends SuperController {
 }

@@ -1,4 +1,4 @@
 package br.com.ocpd.controller;
 
-public class SiglaRegiaoBocaController {
+public class SiglaRegiaoBocaController extends SuperController {
 }
